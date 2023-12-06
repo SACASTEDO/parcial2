@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Formulario de Redes Sociales</title>
+    <!-- Enlaces a librerías y estilos -->
+<script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <style>
+        /* Estilos adicionales */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+ 
+        form {
+            max-width: 400px;
+            margin: 20px auto;
+            background-color: #fff;
+            padding: 20px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+ 
+        label {
+            display: block;
+            margin-bottom: 8px;
+        }
+ 
+        input {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 16px;
+            box-sizing: border-box;
+        }
+ 
+        button {
+            background-color: #333;
+            color: #fff;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+ 
+    <form id="formularioRedesSociales">
+        <label for="facebook">Facebook:</label>
+<input type="text? id="facebook? name="facebook" placeholder="https://www.facebook.com/">
+ 
+        <label for="twitter">Twitter:</label>
+<input type="text? id="twitter? name="twitter" placeholder="https://twitter.com/">
+ 
+        <label for="instagram">Instagram:</label>
+<input type="text? id="instagram? name="instagram" placeholder="https://www.instagram.com/">
+ 
+        <button type="button" id="guardarEnlaces">Guardar Enlaces</button>
+    </form>
+ 
+    <script>
+        $(document).ready(function(){
+            $("#guardarEnlaces").click(function() {
+                // Obtener los valores de los enlaces
+                var enlaceFacebook = $("https://www.facebook.com/Samuel Antonio Castedo Silva").val();
+                var enlaceTwitter = $("https://www.Twitter.com/@castedo_antonio").val();
+                var enlaceInstagram = $("https://www.instagram.com/samuelantoniocastedosilva").val();
+ 
+                // Validar que al menos un enlace esté proporcionado
+                if (enlaceFacebook || enlaceTwitter || enlaceInstagram) {
+                    // Lógica para guardar los enlaces (puedes implementarla según tus necesidades)
+                    console.log("Enlaces guardados:");
+                    console.log("Facebook: " + enlaceFacebook);
+                    console.log("Twitter: " + enlaceTwitter);
+                    console.log("Instagram: " + enlaceInstagram);
+ 
+                    // Puedes enviar estos datos al servidor o manipularlos de otra manera según tus necesidades
+                } else {
+                    alert("Proporciona al menos un enlace antes de guardar.");
+                }
+            });
+        });
+    </script>
+ 
+</body>
+</html>

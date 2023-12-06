@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Formulario de Productos</title>
+    <!-- Enlaces a librerías y estilos -->
+<script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <style>
+        /* Estilos adicionales */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+ 
+        form {
+            max-width: 400px;
+            margin: 20px auto;
+            background-color: #fff;
+            padding: 20px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+ 
+        label {
+            display: block;
+            margin-bottom: 8px;
+        }
+ 
+        input, textarea {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 16px;
+            box-sizing: border-box;
+        }
+ 
+        button {
+            background-color: #333;
+            color: #fff;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+ 
+    <form id="formularioProductos">
+        <label for="nombre">Nombre del Producto:</label>
+        <input type="text" id="nombre" name="nombre" required>
+ 
+        <label for="precio">Precio:</label>
+        <input type="number" id="precio" name="precio" step="0.01" required>
+ 
+        <label for="descripcion">Descripción:</label>
+        <textarea id="descripcion" name="descripcion" rows="4" required></textarea>
+ 
+        <button type="button" id="agregarProducto">Agregar Producto</button>
+    </form>
+ 
+    <script>
+        $(document).ready(function(){
+            $("#agregarProducto").click(function() {
+                // Obtener los valores del formulario
+                var nombre = $("#nombre").val();
+                var precio = $("#precio").val();
+                var descripcion = $("#descripcion").val();
+ 
+                // Validar que los campos no estén vacíos
+                if (nombre !== "" && precio !== "" && descripcion !== "") {
+                    // Lógica para agregar el producto (puedes implementarla según tus necesidades)
+                    console.log("Producto agregado:");
+                    console.log("Nombre: " + nombre);
+                    console.log("Precio: " + precio);
+                    console.log("Descripción: " + descripcion);
+ 
+                    // Puedes enviar estos datos al servidor o manipularlos de otra manera según tus necesidades
+                } else {
+                    alert("Por favor, completa todos los campos.");
+                }
+            });
+        });
+    </script>
+ 
+</body>
+</html>

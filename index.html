@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Tienda Online</title>
+    <!-- Enlaces a librerías y estilos -->
+<script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <style>
+        /* Estilos adicionales */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+ 
+        header {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 1em 0;
+        }
+ 
+        nav {
+            background-color: #444;
+            color: #fff;
+            padding: 0.5em;
+            text-align: center;
+        }
+ 
+        section {
+            margin: 20px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+        }
+ 
+        .producto {
+            background-color: #fff;
+            border: 1px solid #ddd;
+            padding: 10px;
+            margin: 10px;
+            width: 250px;
+            text-align: center;
+        }
+ 
+        footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 1em 0;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Bienvenido a Nuestra Tienda</h1>
+    </header>
+ 
+    <nav>
+        <!-- Menú de navegación, si es necesario -->
+    </nav>
+ 
+    <section id="productos">
+        <!-- Datos simulados de productos -->
+        <div class="producto">
+            <img src="c:\Users\Estudiantes\Documents\samuel\WhatsApp Image 2023-12-04 at 15.33.40.jpg" alt="Producto 1">
+            <h2>Producto 1</h2>
+            <p>Precio: $370.99</p>
+            <button onclick="agregarAlCarrito(1, 'Producto 1', 370.00)">Agregar al Carrito</button>
+        </div>
+ 
+        <div class="producto">
+            <img src="c:\Users\Estudiantes\Documents\samuel\WhatsApp Image 2023-12-04 at 14.22.59.jpg" alt="Producto 2">
+            <h2>Producto 2</h2>
+            <p>Precio: $29.99</p>
+            <button onclick="agregarAlCarrito(2, 'Producto 2', 30.00)">Agregar al Carrito</button>
+             
+        </div>
+        <div id="carrito">
+            <h2>Carrito de Compras</h2>
+            <ul id="lista-carrito"></ul>
+            <p>Total: $<span id="total">0.00</span></p>
+        </div>
+
+ 
+        <script src="carrito.js"></script>
+    </section>
+   
+    <script>
+        $(document).ready(function(){
+            // Evento para el botón "Agregar al carrito"
+            $(".agregarCarrito").click(function() {
+                var nombre = $(this).data("nombre");
+                var precio = $(this).data("precio");
+ 
+                // Lógica para agregar el producto al carrito (puedes implementarla según tus necesidades)
+                console.log("Agregado al carrito: " + nombre + " - Precio: $" + precio.toFixed(2));
+            });
+        });
+    </script>
+ 
+    <footer>
+        <!-- Pie de página, enlaces adicionales, información de contacto, etc. -->
+        <p>&copy; 2023 Nuestra Tienda Online</p>
+    </footer>
+    <nav>
+        <ul>
+            
+            <li><a href="enlaces.html">enlaces</a></li>
+            <li><a href="contacto.html">Contacto</a></li>
+            <li><a href="catalogo.html">Catálogo de productos</a></li>
+            <li><a href="registro.html">registro</a></li>
+            <li><a href="productos 1.html">productos</a></li>
+        </ul>
+    </nav>
+    
+</body>
+</html>
